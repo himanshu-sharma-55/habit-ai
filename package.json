@@ -1,0 +1,37 @@
+{
+  "name": "habit-ai",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/print-expo-url.mjs && npx pnpm@9.15.0 --filter @habit-ai/mobile exec expo start --lan",
+    "start:tunnel": "npx pnpm@9.15.0 --filter @habit-ai/mobile exec expo start --tunnel",
+    "start:lan": "node scripts/print-expo-url.mjs && npx pnpm@9.15.0 --filter @habit-ai/mobile exec expo start --lan",
+    "start:ios": "npx pnpm@9.15.0 --filter @habit-ai/mobile ios",
+    "preview": "npm --prefix apps/desktop run dev",
+    "dev": "npx pnpm@9.15.0 run dev:inner",
+    "dev:inner": "turbo dev",
+    "build": "npx pnpm@9.15.0 run build:inner",
+    "build:inner": "turbo build",
+    "lint": "npx pnpm@9.15.0 run lint:inner",
+    "lint:inner": "turbo lint",
+    "typecheck": "npx pnpm@9.15.0 -r lint",
+    "mobile": "npx pnpm@9.15.0 --filter @habit-ai/mobile start",
+    "mobile:ios": "npx pnpm@9.15.0 --filter @habit-ai/mobile ios",
+    "desktop": "npm --prefix apps/desktop run tauri dev",
+    "desktop:web": "npm --prefix apps/desktop run dev",
+    "install:deps": "npx pnpm@9.15.0 install"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "~19.1.17",
+      "@types/react-dom": "~19.1.0"
+    }
+  }
+}

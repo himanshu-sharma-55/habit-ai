@@ -1,0 +1,15 @@
+node_modules/
+.pnpm-store/
+dist/
+.expo/
+.turbo/
+*.tsbuildinfo
+*.local
+.env
+.DS_Store
+ios/
+android/
+*.jks
+*.p8
+*.p12
+*.mobileprovision

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "paths": {
+      "@habit-ai/db": ["../../packages/db/src/index.ts"],
+      "@habit-ai/db/schema": ["../../packages/db/src/schema.ts"],
+      "@habit-ai/ui": ["../../packages/ui/src/index.ts"]
+    }
+  },
+  "include": ["src"]
+}

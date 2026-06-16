@@ -1,0 +1,15 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "typeRoots": ["./node_modules/@types"],
+    "paths": {
+      "@/*": ["./*"],
+      "@habit-ai/core": ["../../packages/core/src/index.ts"],
+      "@habit-ai/db": ["../../packages/db/src/index.ts"],
+      "@habit-ai/db/schema": ["../../packages/db/src/schema.ts"],
+      "@habit-ai/ui": ["../../packages/ui/src/index.ts"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
+}

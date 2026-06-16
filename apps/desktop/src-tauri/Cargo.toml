@@ -1,0 +1,29 @@
+[package]
+name = "habit-ai-desktop"
+version = "0.1.0"
+description = "Habit AI desktop"
+authors = ["you"]
+edition = "2021"
+
+[lib]
+name = "habit_ai_desktop_lib"
+crate-type = ["lib", "cdylib", "staticlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-shell = "2"
+serde = { version = "1", features = ["derive"] }
+tauri-plugin-fs = "2"
+
+[profile.dev]
+incremental = true
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

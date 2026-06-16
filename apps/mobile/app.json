@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Habit AI",
+    "slug": "habit-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "habit-ai",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.habitai.app"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "autolinkingModuleResolution": true
+    },
+    "extra": {
+      "supabaseUrl": "https://your-project.supabase.co",
+      "supabaseAnonKey": "your-anon-key"
+    }
+  }
+}
